@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "movies"
 include(":app")
- 
+include(":featuremovielist")
+include(":featuremoviedetail")
