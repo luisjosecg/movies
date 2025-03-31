@@ -1,3 +1,11 @@
 <resources>
     <string name="title_activity_movie_list">MovieListActivity</string>
+
+    <!-- Strings used for the popular movies list screen -->
+    <string name="movie_poster">Movie Poster</string>
+    <string name="no_movies_found">No movies found</string>
+    <string name="loading">Loading...</string>
+    <string name="error_loading_movies">Error loading movies</string>
+    <string name="movie_list_title">Movie List</string>
+    <string name="error_message">An error occurred</string>
 </resources>
