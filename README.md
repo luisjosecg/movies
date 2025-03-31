@@ -9,6 +9,8 @@ Movies App is a modular Android application developed using **Jetpack Compose**,
 The application is structured following **Clean Architecture** principles, with a clear separation of layers:
 
 ### 🗂️ Folder Structure
+![image](https://github.com/user-attachments/assets/ec1eed65-1f94-409f-8d0c-af6880e8d507)
+
 
 
 ### 🌟 Architecture Layers
@@ -35,7 +37,7 @@ The application is structured following **Clean Architecture** principles, with 
 - **Jetpack Compose:** For UI development.
 - **Hilt:** For dependency injection.
 - **Retrofit:** For API consumption.
-- **OkHttp:** For HTTP request handling.
+- **Coroutines:** For asynchronous programming.
 - **Navigation Compose:** For screen navigation.
 
 
