@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
@@ -24,6 +27,11 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "AUTHORIZATION", "\"${getApiKey("Authorization")}\"")
+        }
+        debug {
+            buildConfigField("String", "AUTHORIZATION", "\"${getApiKey("Authorization")}\"")
+
         }
     }
     compileOptions {
@@ -34,12 +42,27 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
+    }
+}
+
+fun getApiKey(keyName: String): String {
+    val properties = Properties()
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localPropertiesFile.inputStream().use { properties.load(it) }
+        return properties.getProperty(keyName) ?: ""
+    } else {
+        throw FileNotFoundException("local.properties file not found in the project root")
     }
 }
 
 dependencies {
 
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.gson)
     implementation(libs.hilt.android)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
