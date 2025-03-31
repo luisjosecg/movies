@@ -59,7 +59,7 @@ fun getApiKey(keyName: String): String {
 }
 
 dependencies {
-
+    implementation(project(":commons"))
     implementation(project(":uisystem"))
     implementation(libs.coil.compose)
     implementation(libs.hilt.navigation.compose)

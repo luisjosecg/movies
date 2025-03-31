@@ -58,7 +58,7 @@ fun getApiKey(keyName: String): String {
 }
 
 dependencies {
-
+    implementation(project(":commons"))
     implementation(project(":uisystem"))
     implementation(project(":featuremoviedetail"))
     implementation(libs.coil.compose)

@@ -25,9 +25,4 @@ object MovieDetailModule {
     fun provideMovieDetailRepository(api: MovieDetailApiService): MovieDetailRepository =
         MovieDetailRepositoryImpl(api)
 
-    @Provides
-    @Singleton
-    fun provideGetMovieDetailUseCase(repository: MovieDetailRepository): GetMovieDetailUseCase =
-        GetMovieDetailUseCase(repository)
-
 }

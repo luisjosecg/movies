@@ -1,11 +1,11 @@
 package com.example.featuremoviedetail.domain.repository
 
-import com.example.featuremoviedetail.data.repository.ApiResult
+import com.example.commons.Result
 import com.example.featuremoviedetail.domain.model.MovieDetail
 
 
 interface MovieDetailRepository {
 
-    suspend fun getMovieDetail(movieId: Int):  ApiResult<MovieDetail>
+    suspend fun getMovieDetail(movieId: Int):  Result<MovieDetail>
 
 }

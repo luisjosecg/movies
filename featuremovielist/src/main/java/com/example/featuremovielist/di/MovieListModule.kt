@@ -37,9 +37,6 @@ object MovieListModule {
     fun provideMovieRepository(api: MovieListApiService): MovieRepository =
         MovieRepositoryImpl(api)
 
-    @Provides
-    @Singleton
-    fun provideGetMoviesUseCase(repository: MovieRepository): GetMoviesUseCase =
-        GetMoviesUseCase(repository)
+
 
 }

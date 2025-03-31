@@ -2,7 +2,7 @@ package com.example.featuremoviedetail.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.featuremoviedetail.data.repository.ApiResult
+import com.example.commons.Result
 import com.example.featuremoviedetail.domain.model.MovieDetail
 import com.example.featuremoviedetail.domain.useCase.GetMovieDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -29,16 +29,13 @@ class MovieDetailViewModel @Inject constructor(
         viewModelScope.launch {
             val result = getMoviesUseCase(movieId)
             when (result) {
-                is ApiResult.Success -> {
+                is Result.Success -> {
                     _movie.value = result.data
                     _errorMessage.value = null
                 }
-                is ApiResult.Error -> {
+                is Result.Error -> {
                     _errorMessage.value = result.message
                     _movie.value = null
-                }
-                ApiResult.Loading -> {
-                    _loading.value = true
                 }
             }
             _loading.value = false

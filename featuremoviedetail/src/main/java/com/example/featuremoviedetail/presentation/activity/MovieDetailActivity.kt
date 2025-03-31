@@ -3,7 +3,7 @@ package com.example.featuremoviedetail.presentation.activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.featuremoviedetail.navigation.AppNavigation
+import com.example.featuremoviedetail.presentation.navigation.AppNavigation
 import com.example.uisystem.ui.theme.MoviesTheme
 import dagger.hilt.android.AndroidEntryPoint
 

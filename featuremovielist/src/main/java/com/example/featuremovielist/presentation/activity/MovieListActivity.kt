@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.featuremovielist.navigation.AppNavigation
+import com.example.featuremovielist.presentation.navigation.AppNavigation
 import com.example.uisystem.ui.theme.MoviesTheme
 import dagger.hilt.android.AndroidEntryPoint
 

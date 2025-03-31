@@ -1,4 +1,4 @@
-package com.example.featuremovielist.navigation
+package com.example.featuremovielist.presentation.navigation
 
 import android.content.Intent
 import androidx.compose.runtime.Composable

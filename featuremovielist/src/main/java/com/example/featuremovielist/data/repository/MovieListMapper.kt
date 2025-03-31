@@ -1,4 +1,4 @@
-package com.example.featuremovielist.data.remote.mapper
+package com.example.featuremovielist.data.repository
 
 import com.example.featuremovielist.data.remote.dto.MovieDTO
 import com.example.featuremovielist.domain.model.Movie

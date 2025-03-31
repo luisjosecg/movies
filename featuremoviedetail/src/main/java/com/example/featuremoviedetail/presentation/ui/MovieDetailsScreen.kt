@@ -26,8 +26,8 @@ import com.example.featuremoviedetail.presentation.viewmodel.MovieDetailViewMode
 import com.example.uisystem.ui.components.DetailText
 import com.example.uisystem.ui.components.ErrorMessage
 import com.example.uisystem.ui.components.LoadingIndicator
-import com.example.featuremoviedetail.presentation.utils.Utils.formatDate
 import com.example.uisystem.ui.theme.Dimensions
+import com.example.uisystem.ui.utils.formatToReadableDate
 
 @Composable
 fun MovieDetailsScreen(movieId: Int, viewModel: MovieDetailViewModel = hiltViewModel()) {
@@ -88,7 +88,7 @@ fun MovieDetailsScreen(movieId: Int, viewModel: MovieDetailViewModel = hiltViewM
                 )
                 DetailText(
                     label = stringResource(R.string.movie_release_date_label),
-                    value = formatDate(movieState.releaseDate)
+                    value = movieState.releaseDate.formatToReadableDate()
                 )
             }
         }

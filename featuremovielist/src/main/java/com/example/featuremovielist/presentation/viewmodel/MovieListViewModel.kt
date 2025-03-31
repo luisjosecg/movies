@@ -2,7 +2,7 @@ package com.example.featuremovielist.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.featuremovielist.data.repository.ApiResult
+import com.example.commons.Result
 import com.example.featuremovielist.domain.model.Movie
 import com.example.featuremovielist.domain.useCase.GetMoviesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +19,7 @@ class MovieListViewModel @Inject constructor(
     private val _movies = MutableStateFlow<List<Movie>>(emptyList())
     val movies: StateFlow<List<Movie>> = _movies
 
-    private val _isLoading = MutableStateFlow(false)
+    private val _isLoading = MutableStateFlow(true)
     val isLoading: StateFlow<Boolean> = _isLoading
 
     private val _errorMessage = MutableStateFlow<String?>(null)
@@ -30,20 +30,16 @@ class MovieListViewModel @Inject constructor(
     }
 
     private fun loadMovieList() {
-        _isLoading.value = true
         viewModelScope.launch {
             val result = getMoviesUseCase()
             when (result) {
-                is ApiResult.Success -> {
+                is Result.Success -> {
                     _movies.value = result.data
                     _errorMessage.value = null
                 }
-                is ApiResult.Error -> {
+                is Result.Error -> {
                     _movies.value = emptyList()
                     _errorMessage.value = result.message
-                }
-                ApiResult.Loading -> {
-                    _isLoading.value = true
                 }
             }
             _isLoading.value = false

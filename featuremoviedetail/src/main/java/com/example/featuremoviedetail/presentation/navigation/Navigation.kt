@@ -1,4 +1,4 @@
-package com.example.featuremoviedetail.navigation
+package com.example.featuremoviedetail.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
