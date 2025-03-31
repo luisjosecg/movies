@@ -1,4 +1,4 @@
-package com.example.featuremoviedetail.di.ui.theme
+package com.example.featuremoviedetail.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -60,6 +60,10 @@ fun getApiKey(keyName: String): String {
 
 dependencies {
 
+    implementation(libs.coil.compose)
+    implementation(libs.hilt.navigation.compose)
+    implementation(libs.navigation.compose)
+    implementation(libs.viewmodel.compose)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.gson)

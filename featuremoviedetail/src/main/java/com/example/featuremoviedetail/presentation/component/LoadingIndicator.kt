@@ -10,7 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
-import com.example.featuremovielist.ui.theme.Dimensions
+import com.example.featuremoviedetail.ui.theme.Dimensions
 
 @Composable
 fun LoadingIndicator(
