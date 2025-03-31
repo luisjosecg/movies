@@ -1,4 +1,4 @@
-package com.example.featuremoviedetail.presentation.component
+package com.example.uisystem.ui.components
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text

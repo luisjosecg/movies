@@ -1,4 +1,4 @@
-package com.example.featuremoviedetail.presentation.component
+package com.example.uisystem.ui.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

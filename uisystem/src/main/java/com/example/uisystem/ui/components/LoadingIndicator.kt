@@ -1,4 +1,4 @@
-package com.example.featuremoviedetail.presentation.component
+package com.example.uisystem.ui.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,7 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
-import com.example.featuremoviedetail.ui.theme.Dimensions
+import com.example.uisystem.ui.theme.Dimensions
 
 @Composable
 fun LoadingIndicator(

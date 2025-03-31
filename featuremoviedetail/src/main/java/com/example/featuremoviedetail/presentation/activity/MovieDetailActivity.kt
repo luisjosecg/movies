@@ -1,21 +1,20 @@
-package com.example.featuremovielist
+package com.example.featuremoviedetail.presentation.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import com.example.featuremovielist.navigation.AppNavigation
-import com.example.featuremovielist.ui.theme.MoviesTheme
+import com.example.featuremoviedetail.navigation.AppNavigation
+import com.example.uisystem.ui.theme.MoviesTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MovieListActivity : ComponentActivity() {
+class MovieDetailActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        val movieId = intent.getIntExtra("movieId", 0)
         setContent {
             MoviesTheme {
-                AppNavigation()
+                AppNavigation(movieId)
             }
         }
     }

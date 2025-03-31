@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".MovieListActivity"
+            android:name=".presentation.activity.MovieListActivity"
             android:exported="false"
             android:label="@string/title_activity_movie_list"
             android:theme="@style/Theme.Movies" />

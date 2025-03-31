@@ -1,4 +1,4 @@
-package com.example.featuremovielist.ui.theme
+package com.example.uisystem.ui.theme
 
 import androidx.compose.ui.unit.dp
 
@@ -9,6 +9,7 @@ object Dimensions {
     val cornerRadius = 8.dp
     val imageHeight = 100.dp
     val imageWidth = 70.dp
+    val imageSize = 300.dp
     val spacerHeight = 8.dp
     val loadingIndicatorSize = 64.dp
     val bottomSpacerHeight = 64.dp

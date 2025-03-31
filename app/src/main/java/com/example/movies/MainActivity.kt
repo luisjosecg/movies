@@ -3,7 +3,7 @@ package com.example.movies
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import com.example.featuremovielist.MovieListActivity
+import com.example.featuremovielist.presentation.activity.MovieListActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

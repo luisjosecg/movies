@@ -16,13 +16,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.featuremoviedetail.presentation.component.ErrorMessage
-import com.example.featuremoviedetail.presentation.component.LoadingIndicator
+import com.example.uisystem.ui.components.ErrorMessage
+import com.example.uisystem.ui.components.LoadingIndicator
 import com.example.featuremovielist.R
 import com.example.featuremovielist.domain.model.Movie
-import com.example.featuremovielist.presentation.MovieListViewModel
+import com.example.featuremovielist.presentation.viewmodel.MovieListViewModel
 import com.example.featuremovielist.presentation.component.MovieItem
-import com.example.featuremovielist.ui.theme.Dimensions
+import com.example.uisystem.ui.theme.Dimensions
 
 
 @Composable

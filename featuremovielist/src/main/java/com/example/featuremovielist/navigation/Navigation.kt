@@ -7,7 +7,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.featuremoviedetail.MovieDetailActivity
+import com.example.featuremoviedetail.presentation.activity.MovieDetailActivity
 import com.example.featuremovielist.presentation.ui.PopularMoviesList
 
 private const val HOME = "home"

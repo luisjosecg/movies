@@ -22,12 +22,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
 import com.example.featuremoviedetail.R
-import com.example.featuremoviedetail.presentation.MovieDetailViewModel
-import com.example.featuremoviedetail.presentation.component.DetailText
-import com.example.featuremoviedetail.presentation.component.ErrorMessage
-import com.example.featuremoviedetail.presentation.component.LoadingIndicator
+import com.example.featuremoviedetail.presentation.viewmodel.MovieDetailViewModel
+import com.example.uisystem.ui.components.DetailText
+import com.example.uisystem.ui.components.ErrorMessage
+import com.example.uisystem.ui.components.LoadingIndicator
 import com.example.featuremoviedetail.presentation.utils.Utils.formatDate
-import com.example.featuremoviedetail.ui.theme.Dimensions
+import com.example.uisystem.ui.theme.Dimensions
 
 @Composable
 fun MovieDetailsScreen(movieId: Int, viewModel: MovieDetailViewModel = hiltViewModel()) {
@@ -73,7 +73,7 @@ fun MovieDetailsScreen(movieId: Int, viewModel: MovieDetailViewModel = hiltViewM
                     painter = rememberAsyncImagePainter("https://image.tmdb.org/t/p/w500${movieState.posterPath}"),
                     contentDescription = stringResource(R.string.movie_poster_description),
                     modifier = Modifier
-                        .height(Dimensions.imageHeight)
+                        .height(Dimensions.imageSize)
                         .fillMaxWidth(),
                     contentScale = ContentScale.Crop
                 )

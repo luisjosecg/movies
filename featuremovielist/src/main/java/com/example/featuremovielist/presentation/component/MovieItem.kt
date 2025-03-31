@@ -20,7 +20,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import coil.compose.rememberAsyncImagePainter
 import com.example.featuremovielist.R
 import com.example.featuremovielist.domain.model.Movie
-import com.example.featuremovielist.ui.theme.Dimensions
+import com.example.uisystem.ui.theme.Dimensions
 
 @Composable
 fun MovieItem(movie: Movie, onClick: () -> Unit) {
