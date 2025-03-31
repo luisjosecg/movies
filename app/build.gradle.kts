@@ -47,9 +47,9 @@ hilt {
 
 dependencies {
 
+    implementation(project(":uisystem"))
     implementation(project(":featuremovielist"))
     implementation(project(":featuremoviedetail"))
-
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.gson)
