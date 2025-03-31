@@ -1,4 +1,4 @@
-package com.example.featuremoviedetail.di
+package com.example.featuremoviedetail
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,37 +11,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.featuremoviedetail.di.ui.theme.MoviesTheme
+import com.example.featuremoviedetail.navigation.AppNavigation
+import com.example.featuremoviedetail.ui.theme.MoviesTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MovieDetailActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        val movieId = intent.getIntExtra("movieId", 0)
         setContent {
             MoviesTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                AppNavigation(movieId)
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MoviesTheme {
-        Greeting("Android")
     }
 }
